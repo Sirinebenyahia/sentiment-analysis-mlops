@@ -2,8 +2,8 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-ml/data/raw/*
-ml/data/processed/*
+
 mlruns/
 *.env
 .DS_Store
+
