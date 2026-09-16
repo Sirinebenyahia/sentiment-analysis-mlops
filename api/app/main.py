@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
+from app.core.metrics import metrics_app
 from app.routers import health, predict
 from app.services.inference import load_classifier
 
@@ -31,3 +32,4 @@ app = FastAPI(
 
 app.include_router(health.router)
 app.include_router(predict.router)
+app.mount("/metrics", metrics_app)
